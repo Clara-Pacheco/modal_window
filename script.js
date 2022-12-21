@@ -45,6 +45,11 @@ closeModalBtn.addEventListener('click', function(){
   overlayBackground.classList.add('hidden')
 })
 
+overlayBackground.addEventListener('click', function(){
+  modalHidden.classList.add('hidden')
+  overlayBackground.classList.add('hidden')
+})
+
 
 /* Selecting multiple elements with the same class:
 const btnOpenAllModal = document.querySelectorAll('.show-modal'),
