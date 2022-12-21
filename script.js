@@ -23,9 +23,28 @@ let btnOpenAllModalArray = Array.from(btnOpenAllModal)
 
 // Percorre o array de modais para pegar cada um deles
 
-for(btn of btnOpenAllModalArray){
-  console.log(btn.textContent)
+function openModalWindow(){
+  modalHidden.classList.remove('hidden')
+  overlayBackground.classList.remove('hidden')
+
+  // with classList.remove or classList.add, we do not
+  // use the dot '.' The dot is only for the selector
+  // in document.querySelector(''), but here we are not
+  // selecting anything, we are passing in the name of 
+  // the class. All we need is the string with that name.
+  // It´s possible also to add classes and to check if
+  // an element has a class.
 }
+
+for(btn of btnOpenAllModalArray){
+  btn.addEventListener('click',openModalWindow)
+}
+
+closeModalBtn.addEventListener('click', function(){
+  modalHidden.classList.add('hidden')
+  overlayBackground.classList.add('hidden')
+})
+
 
 /* Selecting multiple elements with the same class:
 const btnOpenAllModal = document.querySelectorAll('.show-modal'),
@@ -41,3 +60,4 @@ Above, we are logging the content of each
 modal in the browser
 
 */
+
