@@ -42,19 +42,12 @@ function addHiddenClass(){
 }
 
 for(btn of btnOpenAllModalArray){
-  btn.addEventListener('click',function(){
-    removeHiddenClass()
-  })
+  btn.addEventListener('click',removeHiddenClass)
 }
 
-closeModalBtn.addEventListener('click', function(){
-  addHiddenClass()
-})
+closeModalBtn.addEventListener('click', addHiddenClass)
 
-overlayBackground.addEventListener('click', function(){
-  addHiddenClass()
-})
-
+overlayBackground.addEventListener('click',addHiddenClass)
 
 /* Selecting multiple elements with the same class:
 const btnOpenAllModal = document.querySelectorAll('.show-modal'),
