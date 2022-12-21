@@ -23,7 +23,7 @@ let btnOpenAllModalArray = Array.from(btnOpenAllModal)
 
 // Percorre o array de modais para pegar cada um deles
 
-function openModalWindow(){
+function removeHiddenClass(){
   modalHidden.classList.remove('hidden')
   overlayBackground.classList.remove('hidden')
 
@@ -36,18 +36,23 @@ function openModalWindow(){
   // an element has a class.
 }
 
+function addHiddenClass(){
+  modalHidden.classList.add('hidden')
+  overlayBackground.classList.add('hidden')
+}
+
 for(btn of btnOpenAllModalArray){
-  btn.addEventListener('click',openModalWindow)
+  btn.addEventListener('click',function(){
+    removeHiddenClass()
+  })
 }
 
 closeModalBtn.addEventListener('click', function(){
-  modalHidden.classList.add('hidden')
-  overlayBackground.classList.add('hidden')
+  addHiddenClass()
 })
 
 overlayBackground.addEventListener('click', function(){
-  modalHidden.classList.add('hidden')
-  overlayBackground.classList.add('hidden')
+  addHiddenClass()
 })
 
 
