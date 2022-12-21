@@ -55,9 +55,11 @@ each one individually:
 for(btn of btnOpenAllModalArray){
   console.log(btn.textContent)
 }
-
 Above, we are logging the content of each
-modal in the browser
-
+modal in the browser.
 */
+
+/* When there is the need to manipulate styles on a page,
+usually it´s better to export the styles into a class and then,
+manipulate the class via JS, as done above.  */
 
